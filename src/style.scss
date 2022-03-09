@@ -1,0 +1,189 @@
+$black: #222;
+$orange: #f55d48;
+$gray: #574b4b;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-width: 0 0 1px 0;
+  border-color: $black;
+  border-style: solid;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% + 1px);
+    width: 140px;
+    border-width: 0 1px 0 0;
+    border-color: $black;
+    border-style: solid;
+
+    h1 {
+      font-family: "Coda", sans-serif;
+      font-weight: 400;
+      font-size: 54px;
+      color: $gray;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      color: $black;
+      transition: 200ms color, 200ms background-color;
+      width: 140px;
+      height: calc(100% + 1px);
+      justify-content: center;
+      font-family: "WorkSans", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+
+      &:nth-child(1) {
+        color: $orange;
+      }
+
+      &:nth-last-child(1) {
+        border-width: 0 0 0 1px;
+        border-color: $black;
+        border-style: solid;
+      }
+
+      &:hover {
+        color: white;
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  .container-text {
+    width: calc(100% - 282px);
+    border-width: 0 1px;
+    border-color: $gray;
+    border-style: solid;
+    padding-top: 80px;
+
+    .large-text {
+      font-size: 140px;
+      font-family: "Coda", sans-serif;
+      color: $gray;
+      padding: 40px;
+
+      &:nth-child(2) {
+        border-width: 0 0 1px 0;
+        border-color: $black;
+        border-style: solid;
+      }
+    }
+
+    .text {
+      color: $gray;
+      font-family: "Coda", sans-serif;
+      font-size: 18px;
+      width: 466px;
+      padding: 40px 0 40px 80px;
+      transition: 200ms;
+    }
+  }
+
+  .image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.header-paragraph {
+  margin: 50px 0;
+  width: calc(100% - 360px);
+
+  h1 {
+    font-family: "Coda", sans-serif;
+    font-weight: 400;
+    font-size: 63px;
+    color: $gray;
+  }
+}
+
+.container-less-more {
+  width: calc(100% - 280px);
+  border-width: 1px 0 1px 0;
+  border-color: $gray;
+  border-style: solid;
+  position: relative;
+
+  > p {
+    width: 40%;
+    margin: 40px 0 40px 5%;
+    font-family: "WorkSans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $gray;
+  }
+
+  .container-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-transition {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    right: -60px;
+    top: 60px;
+    transform: rotate(-90deg);
+    align-items: end;
+
+    .array {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 140px;
+      height: 140px;
+      background-color: $orange;
+      border-radius: 100%;
+      color: white;
+      font-size: 36px;
+    }
+
+    p {
+      padding: 0 15px 10% 0;
+      color: $gray;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+    }
+  }
+}
